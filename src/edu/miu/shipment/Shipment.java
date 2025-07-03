@@ -1,5 +1,5 @@
 package edu.miu.shipment;
 
-public interface Shipment {
+public sealed interface Shipment permits ExpressShipment, StandardShipment, OvernightShipment {
     String getTrackingDetails();
 }
